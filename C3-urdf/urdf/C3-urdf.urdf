@@ -1,0 +1,379 @@
+<robot
+  name="C3-urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.026558 0.092407 -0.0001258"
+        rpy="0 0 0" />
+      <mass
+        value="1.2992" />
+      <inertia
+        ixx="0.0093103"
+        ixy="0.00035118"
+        ixz="3.0418E-06"
+        iyy="0.011617"
+        iyz="-1.4692E-05"
+        izz="0.013075" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://C3-urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://C3-urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="l2">
+    <inertial>
+      <origin
+        xyz="-0.026241 0.2475 0.003467"
+        rpy="0 0 0" />
+      <mass
+        value="0.90288" />
+      <inertia
+        ixx="0.0057649"
+        ixy="0.0012426"
+        ixz="-0.00029077"
+        iyy="0.0069206"
+        iyz="0.00014533"
+        izz="0.0054181" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://C3-urdf/meshes/l2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://C3-urdf/meshes/l2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.018"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l2" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="l3">
+    <inertial>
+      <origin
+        xyz="-0.10039 0.40843 0.0048175"
+        rpy="0 0 0" />
+      <mass
+        value="1.0163" />
+      <inertia
+        ixx="0.012081"
+        ixy="-1.3748E-05"
+        ixz="1.7848E-05"
+        iyy="0.0051558"
+        iyz="-7.607E-05"
+        izz="0.0093083" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://C3-urdf/meshes/l3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://C3-urdf/meshes/l3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j2"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="l2" />
+    <child
+      link="l3" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="l4">
+    <inertial>
+      <origin
+        xyz="-0.10049 0.54639 0.0024521"
+        rpy="0 0 0" />
+      <mass
+        value="0.32022" />
+      <inertia
+        ixx="0.001073"
+        ixy="3.7058E-05"
+        ixz="1.784E-05"
+        iyy="0.0012185"
+        iyz="-3.1213E-06"
+        izz="0.0012464" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://C3-urdf/meshes/l4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://C3-urdf/meshes/l4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j3"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="l3" />
+    <child
+      link="l4" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="l5">
+    <inertial>
+      <origin
+        xyz="-0.20199 0.59639 0.004114"
+        rpy="0 0 0" />
+      <mass
+        value="0.0010227" />
+      <inertia
+        ixx="3.9483E-07"
+        ixy="-6.6604E-08"
+        ixz="7.9676E-08"
+        iyy="3.1949E-07"
+        iyz="1.8241E-07"
+        izz="2.462E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://C3-urdf/meshes/l5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://C3-urdf/meshes/l5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j4"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="l4" />
+    <child
+      link="l5" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="l6">
+    <inertial>
+      <origin
+        xyz="-0.37537 0.55196 0.00034969"
+        rpy="0 0 0" />
+      <mass
+        value="0.12729" />
+      <inertia
+        ixx="5.3239E-05"
+        ixy="5.4336E-08"
+        ixz="-1.049E-06"
+        iyy="0.00010183"
+        iyz="1.3762E-08"
+        izz="0.00011505" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://C3-urdf/meshes/l6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79608 0.82353 0.93725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://C3-urdf/meshes/l6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j5"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="l5" />
+    <child
+      link="l6" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ee">
+    <inertial>
+      <origin
+        xyz="-0.41261 0.55214 6.0749E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.010333" />
+      <inertia
+        ixx="4.1964E-06"
+        ixy="-1.7474E-09"
+        ixz="-8.122E-10"
+        iyy="2.1295E-06"
+        iyz="9.8701E-10"
+        izz="2.1242E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://C3-urdf/meshes/ee.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.52941 0.54902 0.54902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://C3-urdf/meshes/ee.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j6"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="l6" />
+    <child
+      link="ee" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
